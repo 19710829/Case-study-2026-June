@@ -19,3 +19,7 @@ Table/Table Data Import Wizard/  Import Train_Drug (column is smaller than 870)
 Refresh ALL
 
 Load all datasets into Jupiter Notebook under MoA case study 20260614
+
+Download Jupyter Notebook from ANACONDA
+Connect MySQL with Jupyter and Python
+
