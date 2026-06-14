@@ -11,3 +11,11 @@ Strategy: a) work at train_feature;
  Strategy: a) work at train_feature;
           b) SQL group and display drugs produced low to no cytotoxicity;
           c) Use PCA or UMAP to show how "Control" samples (DMSO) cluster differently from "Active" drugs.
+
+20260614 Import dataset
+MySQL workbench/Query/ CREATE DATABASE moa_project;
+Refresh ALL
+Table/Table Data Import Wizard/  Import Train_Drug (column is smaller than 870)
+Refresh ALL
+
+Load all datasets into Jupiter Notebook under MoA case study 20260614
