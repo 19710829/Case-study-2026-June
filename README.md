@@ -23,3 +23,22 @@ Load all datasets into Jupiter Notebook under MoA case study 20260614
 Download Jupyter Notebook from ANACONDA
 Connect MySQL with Jupyter and Python
 
+import pandas as pd
+from sqlalchemy import create_engine
+
+# 1. Load the data into Python memory
+df = pd.read_csv('train_features.csv')
+
+# 2. CREATE A FRESH CONNECTION
+# RE-TYPE your working password here carefully
+my_real_password = 'My_New_Working_Password' 
+
+engine = create_engine(f'mysql+mysqlconnector://root:{my_real_password}@localhost/moa_project')
+
+# 3. PUSH TO SQL
+try:
+    print("Uploading... this will take about 1-2 minutes...")
+    df.to_sql('train_features', con=engine, index=False, if_exists='replace', chunksize=1000)
+    print("Success! Table 'train_features' is now in MySQL Workbench.")
+except Exception as e:
+    print(f"Error: {e}")
